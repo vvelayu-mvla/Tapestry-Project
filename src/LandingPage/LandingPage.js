@@ -5,6 +5,8 @@ import DatGui, { DatNumber, DatSelect, DatButton } from "react-dat-gui";
 import FluidAnimation from "react-fluid-animation";
 import random from "random";
 
+import Typing from "react-typing-animation"; 
+
 const defaultConfig = {
   textureDownsample: 1,
   densityDissipation: 0.98,
@@ -55,14 +57,20 @@ export default class LandingPage extends Component {
             pointerEvents: "none"
           }}
         >
-          <h1
-            style={{
-              fontSize: "3em",
-              textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
-            }}
-          >
-            Heyeyyeye
-          </h1>
+          <Typing>
+            <div>
+              <Typing.Delay ms={2000} />
+              <h1
+                  style={{
+                    fontSize: "3em",
+                    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
+                  }}
+                >
+                  Hey Mr Moul
+                </h1>
+            </div> 
+          </Typing>
+          
         </div>
 
         <DatGui data={config} onUpdate={this._onUpdate}>
