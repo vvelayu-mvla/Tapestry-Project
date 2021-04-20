@@ -97,13 +97,15 @@ export default class LandingPage extends Component {
                   fontSize: "3em",
                   textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
                 }}>
-                Enjoy the Experience 
+                Enjoy the Experience.....
               </h1>
+              
+              <Typing.Delay ms={1000} />
 
             </div> 
           </Typing>
 
-          <Typing.Delay ms={1000} />
+          
           
         </div>
 
