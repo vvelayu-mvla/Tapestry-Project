@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {Redirect} from "react-router-dom"; 
+
+import DatGui, { DatNumber, DatSelect, DatButton } from "react-dat-gui";
 
 import FluidAnimation from "react-fluid-animation";
 import random from "random";
@@ -15,19 +18,29 @@ const defaultConfig = {
   splatRadius: 0.005
 };
 
+const redirectRoute = "/home"; 
 export default class LandingPage extends Component {
   state = {
     config: {
       ...defaultConfig
-    }
+    },
+    redirect: false
   };
 
   componentDidMount() {
     this._reset();
   }
 
+  redirectOn = () => {
+    this.setState({redirect: true});
+  }
+  
   render() {
     const { config } = this.state;
+
+    if (this.state.redirect) {
+      return <Redirect to={redirectRoute} />
+    }
 
     return (
       <div
@@ -55,7 +68,7 @@ export default class LandingPage extends Component {
             pointerEvents: "none"
           }}
         >
-          <Typing>
+          <Typing hideCursor={true} onFinishedTyping={this.redirectOn}>
             <div>
               <Typing.Delay ms={2000} />
               <h1
@@ -64,7 +77,7 @@ export default class LandingPage extends Component {
                   textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
                 }}
               >
-                Hey Mr Moul.... 
+                Hey Mr Moul....
               </h1>
               
               <Typing.Delay ms={1000} />
@@ -89,8 +102,14 @@ export default class LandingPage extends Component {
 
             </div> 
           </Typing>
+
+          <Typing.Delay ms={1000} />
           
         </div>
+
+        {/* <DatGui data={config} onUpdate={this._onUpdate}>
+          <DatButton label="Reset Config" onClick={this._onReset} />
+        </DatGui> */}
       </div>
     );
   }
