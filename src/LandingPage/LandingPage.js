@@ -61,13 +61,34 @@ export default class LandingPage extends Component {
             <div>
               <Typing.Delay ms={2000} />
               <h1
-                  style={{
-                    fontSize: "3em",
-                    textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
-                  }}
-                >
-                  Hey Mr Moul
-                </h1>
+                style={{
+                  fontSize: "3em",
+                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
+                }}
+              >
+                Hey Mr Moul.... 
+              </h1>
+              
+              <Typing.Delay ms={1000} />
+              
+              <h1 
+                style={{
+                  fontSize: "3em",
+                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
+                }}>
+                You might be thinking, what should I do now?
+              </h1>
+
+              <Typing.Delay ms={1000} />
+
+              <h1
+                style={{
+                  fontSize: "3em",
+                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.5)"
+                }}>
+                Enjoy the Experience 
+              </h1>
+
             </div> 
           </Typing>
           
