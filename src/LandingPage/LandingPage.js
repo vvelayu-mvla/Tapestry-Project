@@ -18,7 +18,7 @@ const defaultConfig = {
   splatRadius: 0.005
 };
 
-const redirectRoute = "/home"; 
+const redirectRoute = "/tapestry"; 
 export default class LandingPage extends Component {
   state = {
     config: {
